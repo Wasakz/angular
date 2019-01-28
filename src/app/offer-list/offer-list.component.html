@@ -1,0 +1,60 @@
+<div class="container">
+  <br><br>
+  <app-offer [parentForm]="addOfferForm"></app-offer>
+
+  <div class="container" id="form-container">
+  <form [formGroup]="addOfferForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+    <label for="name">Nazwa samochodu:</label>
+    <input class="form-control" id="name" formControlName="name" placeholder="Podaj nazwę samochodu" required>
+  </div>
+    <div class="form-group">
+      <label for="seatsNumber">Ilość miejsc:</label>
+      <input class="form-control" id="seatsNumber" formControlName="seatsNumber" placeholder="Podaj ilość miejsc" required number>
+    </div>
+    <div class="form-group">
+      <label for="gearBox">Skrzynia biegów: :</label>
+      <select class="form-control" id="gearBox" formControlName="gearBox" required>
+        <option>A</option>
+        <option>M</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="doorNumber">Ilość drzwi :</label>
+      <input class="form-control" id="doorNumber" formControlName="doorNumber" placeholder="Podaj ilość drzwi" required number>
+    </div>
+
+    <div class="form-group">
+      <label for="airCondition">Klimatyzacja: </label>
+      <select class="form-control" id="airCondition" formControlName="airCondition" required>
+        <option>A/C</option>
+        <option>Brak</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Cena :</label>
+      <input class="form-control" id="price" formControlName="price" placeholder="Podaj cenę" required number>
+    </div>
+
+
+    <div class="form-group">
+      <label for="description">Opis: </label>
+      <textarea class="form-control" id="description" formControlName="description" rows="3" required></textarea>
+    </div>
+
+    <!--this.name = name;
+    this.description = description;
+    this.seatsNumber = seatsNumber;
+    this.gearBox = gearBox;
+    this.airCondition = airCondition;
+    this.doorNumber = doorNumber;
+    this.price = price; -->
+
+
+
+    <button type="submit" class="btn btn-primary">Zatwierdź</button>
+  </form>
+</div>
+</div>
+

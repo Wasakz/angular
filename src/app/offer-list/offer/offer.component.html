@@ -1,0 +1,29 @@
+<div class="container" class="offer-container" *ngFor="let offerModel of offerModels">
+<div class = row>
+  <div class="col"><h3> {{ offerModel.name }}</h3></div>
+</div>
+
+<div class="row" >
+  <div class="col">
+    <i class="fas fa-user"></i> {{ offerModel.seatsNumber }}
+  </div>
+  <div class="col">
+    <i class="fas fa-cogs"></i> {{ offerModel.gearBox }}
+  </div>
+  <div class="col">
+    <i class="fas fa-snowflake"></i> {{ offerModel.airCondition }}
+  </div>
+  <div class="col"><i class="fas fa-car-side"></i> {{ offerModel.doorNumber }}</div>
+</div>
+  <div class="row">
+    <div class="col">
+      {{ offerModel.description }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-8 lead font-weight-bold text-success"> {{ offerModel.price }} zł</div>
+    <div class="col">
+      <button type="button" class="btn btn-info">Zarezerwuj</button>
+  </div>
+</div>
+</div>
